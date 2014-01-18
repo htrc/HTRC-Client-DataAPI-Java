@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>edu.indiana.d2i.htrc.clients</groupId>
-	<artifactId>dataapi-client</artifactId>
-	<version>0.6.3-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>edu.indiana.d2i.htrc.clients</groupId>
+    <artifactId>dataapi-client</artifactId>
+    <version>0.6.3-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -15,13 +15,13 @@
         </dependency>
 
         <dependency>
-		    <groupId>commons-logging</groupId>
-		    <artifactId>commons-logging</artifactId>
-		    <version>1.1.3</version>
-		</dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1.3</version>
+        </dependency>
     </dependencies>
 
-	<properties>
+    <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <public.svn.root>svn://svn.code.sf.net/p/htrc/code</public.svn.root>
         <developer.svn.root>svn+ssh://svn.code.sf.net/p/htrc/code</developer.svn.root>
@@ -72,8 +72,8 @@
     </build>
 
     <!-- Project Information -->
-	<name>HTRC-Client-DataAPI-Java</name>
-	<description>Java client for the HTRC DataAPI service</description>
+    <name>HTRC-Client-DataAPI-Java</name>
+    <description>Java client for the HTRC DataAPI service</description>
     <url>http://wiki.htrc.illinois.edu/display/DEV/HTRC-Client-DataAPI</url>
 
     <organization>
@@ -84,12 +84,12 @@
     <!-- Environment Settings -->
     <issueManagement>
         <system>jira</system>
-        <url>http://jira.htrc.illinois.edu/browse/DATAAPICLIENT</url>
+        <url>http://jira.htrc.illinois.edu/browse/CLIDATAAPI</url>
     </issueManagement>
 
     <ciManagement>
         <system>bamboo</system>
-        <url>http://bamboo.htrc.illinois.edu/browse/DATAAPICLIENT</url>
+        <url>http://bamboo.htrc.illinois.edu/browse/CLIDATAAPI</url>
     </ciManagement>
 
     <scm>
@@ -103,15 +103,21 @@
             <id>internal</id>
             <name>Internal Release Repository</name>
             <url>http://htrc.illinois.edu:8080/archiva/repository/internal/</url>
-            <releases><enabled>true</enabled></releases>
-            <snapshots><enabled>false</enabled></snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </repository>
 
         <repository>
             <id>snapshots</id>
             <name>Internal Snapshot Repository</name>
             <url>http://htrc.illinois.edu:8080/archiva/repository/snapshots/</url>
-            <releases><enabled>false</enabled></releases>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
