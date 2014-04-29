@@ -35,8 +35,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.0</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
                 </configuration>
             </plugin>
 
@@ -96,52 +96,34 @@
         <developerConnection>scm:svn:${developer.svn.root}/HTRC-Client-DataAPI-Java/trunk</developerConnection>
         <url>${fisheye.svn.root}/HTRC-Client-DataAPI-Java/trunk</url>
     </scm>
-
+ 
     <repositories>
         <repository>
-            <id>internal</id>
-            <name>Internal Release Repository</name>
-            <url>http://htrc.illinois.edu:8080/archiva/repository/internal/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-
-        <repository>
-            <id>snapshots</id>
-            <name>Internal Snapshot Repository</name>
-            <url>http://htrc.illinois.edu:8080/archiva/repository/snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
+            <id>nexus</id>
+            <name>HTRC Nexus Repository</name>
+            <url>http://htrc.illinois.edu/nexus/content/groups/public/</url>
         </repository>
     </repositories>
-
+ 
     <pluginRepositories>
         <pluginRepository>
-            <id>internal</id>
-            <url>http://htrc.illinois.edu:8080/archiva/repository/internal/</url>
+            <id>nexus</id>
+            <name>HTRC Nexus Repository</name>
+            <url>http://htrc.illinois.edu/nexus/content/groups/public/</url>
         </pluginRepository>
     </pluginRepositories>
-
+ 
     <distributionManagement>
         <repository>
-            <id>htrc.archiva.internal</id>
-            <name>Internal Release Repository</name>
-            <url>http://htrc.illinois.edu:8080/archiva/repository/internal/</url>
+            <id>htrc.nexus.releases</id>
+            <name>HTRC Release Repository</name>
+            <url>http://htrc.illinois.edu/nexus/content/repositories/releases/</url>
         </repository>
-
+ 
         <snapshotRepository>
-            <id>htrc.archiva.snapshots</id>
-            <name>Internal Snapshot Repository</name>
-            <url>http://htrc.illinois.edu:8080/archiva/repository/snapshots/</url>
+            <id>htrc.nexus.snapshots</id>
+            <name>HTRC Snapshot Repository</name>
+            <url>http://htrc.illinois.edu/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
